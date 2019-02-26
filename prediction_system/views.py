@@ -10,6 +10,6 @@ class Testview(APIView):
         return HttpResponse(json.dumps(dict))
 
     def post(self,request):
-        print(request)
+        print(request.data)
         dict = {'message': 'Hello, Varun'}
         return HttpResponse(json.dumps(dict))
