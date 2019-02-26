@@ -11,4 +11,4 @@ class Testview(APIView):
 
     def post(self,request):
         dic = dict(request['POST'])
-        return HttpResponse(json.dumps(dict))
+        return HttpResponse(json.dumps(dic))
