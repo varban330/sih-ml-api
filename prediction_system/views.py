@@ -5,7 +5,7 @@ import json
 api_key = '94cea4adae3c452ebd3c2ff10dd54d7c'
 
 # Create your views here.
-class Testview(APIView):
+class TestView(APIView):
     def get(self, request):
         dict = {'message': 'Hello, Varun'}
         return HttpResponse(json.dumps(dict))
