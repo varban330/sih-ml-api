@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     # Index
-    url(r'^$', views.index, name="Index"),
+    url(r'^$', views.Testview.as_view(), name="Index"),
 ]
