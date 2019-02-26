@@ -10,6 +10,6 @@ class Testview(APIView):
         return HttpResponse(json.dumps(dict))
 
     def post(self,request):
-        print(request.META)
+        print(request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"])
         dict = {'message': 'Hello, Varun'}
         return HttpResponse(json.dumps(dict))
