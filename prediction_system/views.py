@@ -1,3 +1,6 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd 
 from django.http import HttpResponse
 from rest_framework.views import APIView
 import json
