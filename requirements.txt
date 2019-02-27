@@ -129,7 +129,6 @@ terminado==0.8.1
 testpath==0.4.2
 tornado==5.1.1
 traitlets==4.3.2
-ubuntu-drivers-common==0.0.0
 ufw==0.35
 unattended-upgrades==0.1
 unity-scope-calculator==0.1
