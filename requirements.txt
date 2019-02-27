@@ -129,7 +129,6 @@ terminado==0.8.1
 testpath==0.4.2
 tornado==5.1.1
 traitlets==4.3.2
-unattended-upgrades==0.1
 unity-scope-calculator==0.1
 unity-scope-chromiumbookmarks==0.1
 unity-scope-colourlovers==0.1
@@ -150,7 +149,6 @@ wcwidth==0.1.7
 webencodings==0.5.1
 whitenoise==4.1.2
 widgetsnbextension==3.2.1
-wordcloud==1.4.1
 wrapt==1.9.0
 xkit==0.0.0
 zope.interface==4.3.2
