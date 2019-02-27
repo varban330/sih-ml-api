@@ -10,7 +10,7 @@ class TestView(APIView):
     def get(self, request):
         if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
             dict = {'message': 'Hi,This is your developer, Varun this side'}
-            return HttpResponse(json.dumps(dict))
+            return HttpResponse(json.dumps(dict),status=200)
         else:
             dict = {'message': 'Incorrect API Key'}
             return HttpResponse(json.dumps(dict), status=401)
@@ -28,7 +28,7 @@ class MessFeePred(APIView):
     def get(self, request):
         if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
             dict = {'message': 'Hi,This is your developer, Varun this side'}
-            return HttpResponse(json.dumps(dict))
+            return HttpResponse(json.dumps(dict),status=200)
         else:
             dict = {'message': 'Incorrect API Key'}
             return HttpResponse(json.dumps(dict), status=401)
