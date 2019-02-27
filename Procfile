@@ -1,1 +1,1 @@
-web: gunicorn sih_ml_api.wsgi --log-file -
+web: gunicorn sih-ml-api.wsgi
