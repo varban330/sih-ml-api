@@ -16,4 +16,4 @@ class TestView(APIView):
             return HttpResponse(json.dumps(dict), status=200)
         else:
             dict = {'message': 'Incorrect API Key'}
-            return HttpResponse(json.dumps(dict), status=400)
+            return HttpResponse(json.dumps(dict), status=401)
