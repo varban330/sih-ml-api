@@ -89,7 +89,6 @@ pycrypto==2.6.1
 pycups==1.9.73
 pyflakes==1.6.0
 Pygments==2.3.1
-pygobject==3.26.1
 PyJWT==1.6.4
 pylint==1.8.3
 pymacaroons==0.13.0
