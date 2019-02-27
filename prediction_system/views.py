@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import pandas as pd 
+import pandas as pd
 from django.http import HttpResponse
 from rest_framework.views import APIView
 import json
@@ -65,6 +65,48 @@ class MessFeePred(APIView):
             x_pred = x_pred[:,k]
             # Load Model and Predict
             loaded_model = pickle.load(open('Mess(hr)/Mess(hr)model.sav', 'rb'))
+            result = loaded_model.predict(x_pred)
+            dict = {'days':result[0]}
+            return HttpResponse(json.dumps(dict), status=200)
+        else:
+            dict = {'message': 'Incorrect API Key'}
+            return HttpResponse(json.dumps(dict), status=401)
+
+
+class SchoPortPred(APIView):
+    def get(self, request):
+        if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
+            dict = {'message': 'Hi,This is your developer, Varun this side'}
+            return HttpResponse(json.dumps(dict),status=200)
+        else:
+            dict = {'message': 'Incorrect API Key'}
+            return HttpResponse(json.dumps(dict), status=401)
+
+    def post(self,request):
+        if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
+            # Preparing Data from Request
+            data = list()
+            data.append(request.data['Area'])
+            data.append(request.data['Degree'])
+            # Label Encoders load and transform
+            encx0 = pickle.load(open('scholarship_portal/scholarship_portalencx0.sav','rb'))
+            encx1 = pickle.load(open('scholarship_portal/scholarship_portalencx1.sav','rb'))
+            d = encx0.transform([data[0]])
+            data[0] = d[0]
+            d = encx1.transform([data[1]])
+            data[1] = d[0]
+            # One hot encoder load and transform
+            onehenc = pickle.load(open('scholarship_portal/scholarship_portalonehenc.sav','rb'))
+            ar = np.array(data)
+            ar = ar.reshape(1,-1)
+            x_pred=onehenc.transform(ar).toarray()
+            k = list()
+            for i in range(6):
+                if i!=0 and i!=3:
+                    k.append(i)
+            x_pred = x_pred[:,k]
+            # Load Model and Predict
+            loaded_model = pickle.load(open('scholarship_portal/scholarship_portalmodel.sav', 'rb'))
             result = loaded_model.predict(x_pred)
             dict = {'days':result[0]}
             return HttpResponse(json.dumps(dict), status=200)
