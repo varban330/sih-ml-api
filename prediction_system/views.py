@@ -216,7 +216,7 @@ class WaterSupplyPred(APIView):
                 ar = ar.reshape(1,-1)
                 x_pred=onehenc.transform(ar).toarray()
                 k = list()
-                notlist = [0,2,6,8]
+                notlist = [0,2,5,7]
                 for i in range(10):
                     if i not in notlist:
                         k.append(i)
