@@ -67,7 +67,7 @@ class MessFeePred(APIView):
                 # Load Model and Predict
                 loaded_model = pickle.load(open('Mess(hr)/Mess(hr)model.sav', 'rb'))
                 result = loaded_model.predict(x_pred)
-                dict = {'days':result[0]}
+                dict = {'days':round(result[0])}
                 return HttpResponse(json.dumps(dict), status=200)
             else:
                 dict = {'message': 'Incorrect API Key'}
@@ -113,7 +113,7 @@ class SchoPortPred(APIView):
                 # Load Model and Predict
                 loaded_model = pickle.load(open('scholarship_portal/scholarship_portalmodel.sav', 'rb'))
                 result = loaded_model.predict(x_pred)
-                dict = {'days':result[0]}
+                dict = {'days':round(result[0])}
                 return HttpResponse(json.dumps(dict), status=200)
             else:
                 dict = {'message': 'Incorrect API Key'}
@@ -167,7 +167,7 @@ class SchoDisPred(APIView):
                 # Load Model and Predict
                 loaded_model = pickle.load(open('scholarship_disbursement/scholarship_disbursementmodel.sav', 'rb'))
                 result = loaded_model.predict(x_pred)
-                dict = {'days':result[0]}
+                dict = {'days':round(result[0])}
                 return HttpResponse(json.dumps(dict), status=200)
             else:
                 dict = {'message': 'Incorrect API Key'}
