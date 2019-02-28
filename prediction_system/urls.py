@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^scholarship_portal/$', views.SchoPortPred.as_view(), name="Scholarship_Portal"),
     url(r'^scholarship_disbursement/$', views.SchoDisPred.as_view(), name="Scholarship_Disbursement"),
     url(r'^water_supply/$', views.WaterSupplyPred.as_view(), name="Water_Supply"),
+    url(r'^furniture/$', views.FurniturePred.as_view(), name="Furniture"),
 ]
