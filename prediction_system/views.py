@@ -175,3 +175,60 @@ class SchoDisPred(APIView):
         except Exception as e:
             dict = {'message': e.message}
             return HttpResponse(json.dumps(dict), status=400)
+
+
+class WaterSupplyPred(APIView):
+    def get(self, request):
+        if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
+            dict = {'message': 'Scholarship Disbursement Prediction'}
+            return HttpResponse(json.dumps(dict),status=200)
+        else:
+            dict = {'message': 'Incorrect API Key'}
+            return HttpResponse(json.dumps(dict), status=401)
+
+    def post(self,request):
+        try:
+            if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
+                # Preparing Data from Request
+                data = list()
+                data.append(request.data['Issue_with'])
+                data.append(request.data['Parts'])
+                data.append(request.data['Quantity'])
+                data.append(request.data['Availability'])
+                data.append(request.data['Need'])
+
+                # Label Encoders load and transform
+                encx0 = pickle.load(open('water_supply/water_supplyencx0.sav','rb'))
+                encx1 = pickle.load(open('water_supply/water_supplyencx1.sav','rb'))
+                encx3 = pickle.load(open('water_supply/water_supplyencx3.sav','rb'))
+                encx4 = pickle.load(open('water_supply/water_supplyencx4.sav','rb'))
+                d = encx1.transform([data[0]])
+                data[1] = d[0]
+                d = encx1.transform([data[1]])
+                data[1] = d[0]
+                d = encx3.transform([data[3]])
+                data[3] = d[0]
+                d = encx4.transform([data[4]])
+                data[4] = d[0]
+                # One hot encoder load and transform
+                onehenc = pickle.load(open('scholarship_disbursement/scholarship_disbursementonehenc.sav','rb'))
+                ar = np.array(data)
+                ar = ar.reshape(1,-1)
+                x_pred=onehenc.transform(ar).toarray()
+                k = list()
+                notlist = [0,2,6,8]
+                for i in range(10):
+                    if i not in notlist:
+                        k.append(i)
+                x_pred = x_pred[:,k]
+                # Load Model and Predict
+                loaded_model = pickle.load(open('water_supply/water_supplymodel.sav', 'rb'))
+                result = loaded_model.predict(x_pred)
+                dict = {'days':round(result[0])}
+                return HttpResponse(json.dumps(dict), status=200)
+            else:
+                dict = {'message': 'Incorrect API Key'}
+                return HttpResponse(json.dumps(dict), status=401)
+        except Exception as e:
+            dict = {'message': e.message}
+            return HttpResponse(json.dumps(dict), status=400)
