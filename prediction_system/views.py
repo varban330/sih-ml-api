@@ -121,3 +121,57 @@ class SchoPortPred(APIView):
         except Exception as e:
             dict = {'message': e.message}
             return HttpResponse(json.dumps(dict), status=400)
+
+
+class SchoDisPred(APIView):
+    def get(self, request):
+        if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
+            dict = {'message': 'Scholarship Disbursement Prediction'}
+            return HttpResponse(json.dumps(dict),status=200)
+        else:
+            dict = {'message': 'Incorrect API Key'}
+            return HttpResponse(json.dumps(dict), status=401)
+
+    def post(self,request):
+        try:
+            if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
+                # Preparing Data from Request
+                data = list()
+                data.append(request.data['Current_CG'])
+                data.append(request.data['Course'])
+                data.append(request.data['Category'])
+                data.append(request.data['Bank'])
+                data.append(request.data['Mode'])
+                data.append(request.data['Year'])
+                # Label Encoders load and transform
+                encx1 = pickle.load(open('scholarship_disbursement/scholarship_disbursementencx1.sav','rb'))
+                encx3 = pickle.load(open('scholarship_disbursement/scholarship_disbursementencx3.sav','rb'))
+                encx4 = pickle.load(open('scholarship_disbursement/scholarship_disbursementencx4.sav','rb'))
+                d = encx1.transform([data[1]])
+                data[1] = d[0]
+                d = encx3.transform([data[3]])
+                data[3] = d[0]
+                d = encx4.transform([data[4]])
+                data[4] = d[0]
+                # One hot encoder load and transform
+                onehenc = pickle.load(open('scholarship_disbursement/scholarship_disbursementonehenc.sav','rb'))
+                ar = np.array(data)
+                ar = ar.reshape(1,-1)
+                x_pred=onehenc.transform(ar).toarray()
+                k = list()
+                notlist = [0,8,12,15,20]
+                for i in range(23):
+                    if i not in notlist:
+                        k.append(i)
+                x_pred = x_pred[:,k]
+                # Load Model and Predict
+                loaded_model = pickle.load(open('scholarship_disbursement/scholarship_disbursementmodel.sav', 'rb'))
+                result = loaded_model.predict(x_pred)
+                dict = {'days':result[0]}
+                return HttpResponse(json.dumps(dict), status=200)
+            else:
+                dict = {'message': 'Incorrect API Key'}
+                return HttpResponse(json.dumps(dict), status=401)
+        except Exception as e:
+            dict = {'message': e.message}
+            return HttpResponse(json.dumps(dict), status=400)
