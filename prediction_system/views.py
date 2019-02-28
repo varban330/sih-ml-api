@@ -211,7 +211,7 @@ class WaterSupplyPred(APIView):
                 d = encx4.transform([data[4]])
                 data[4] = d[0]
                 # One hot encoder load and transform
-                onehenc = pickle.load(open('scholarship_disbursement/scholarship_disbursementonehenc.sav','rb'))
+                onehenc = pickle.load(open('water_supply/water_supplyonehenc.sav','rb'))
                 ar = np.array(data)
                 ar = ar.reshape(1,-1)
                 x_pred=onehenc.transform(ar).toarray()
