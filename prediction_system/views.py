@@ -73,7 +73,7 @@ class MessFeePred(APIView):
                 dict = {'message': 'Incorrect API Key'}
                 return HttpResponse(json.dumps(dict), status=401)
         except Exception as e:
-            dict = {'message': e.message}
+            dict = {'message': str(e)}
             return HttpResponse(json.dumps(dict), status=400)
 
 
@@ -119,7 +119,7 @@ class SchoPortPred(APIView):
                 dict = {'message': 'Incorrect API Key'}
                 return HttpResponse(json.dumps(dict), status=401)
         except Exception as e:
-            dict = {'message': e.message}
+            dict = {'message': str(e)}
             return HttpResponse(json.dumps(dict), status=400)
 
 
@@ -173,7 +173,7 @@ class SchoDisPred(APIView):
                 dict = {'message': 'Incorrect API Key'}
                 return HttpResponse(json.dumps(dict), status=401)
         except Exception as e:
-            dict = {'message': e.message}
+            dict = {'message': str(e)}
             return HttpResponse(json.dumps(dict), status=400)
 
 
@@ -230,7 +230,7 @@ class WaterSupplyPred(APIView):
                 dict = {'message': 'Incorrect API Key'}
                 return HttpResponse(json.dumps(dict), status=401)
         except Exception as e:
-            dict = {'message': e.message}
+            dict = {'message': str(e)}
             return HttpResponse(json.dumps(dict), status=400)
 
 
@@ -283,5 +283,5 @@ class FurniturePred(APIView):
                 dict = {'message': 'Incorrect API Key'}
                 return HttpResponse(json.dumps(dict), status=401)
         except Exception as e:
-            dict = {'message': e.message}
+            dict = {'message': str(e)}
             return HttpResponse(json.dumps(dict), status=400)
