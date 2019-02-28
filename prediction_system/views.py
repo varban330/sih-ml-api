@@ -202,7 +202,7 @@ class WaterSupplyPred(APIView):
                 encx1 = pickle.load(open('water_supply/water_supplyencx1.sav','rb'))
                 encx3 = pickle.load(open('water_supply/water_supplyencx3.sav','rb'))
                 encx4 = pickle.load(open('water_supply/water_supplyencx4.sav','rb'))
-                d = encx1.transform([data[0]])
+                d = encx0.transform([data[0]])
                 data[1] = d[0]
                 d = encx1.transform([data[1]])
                 data[1] = d[0]
