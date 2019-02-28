@@ -255,7 +255,7 @@ class FurniturePred(APIView):
 
             # Label Encoders load and transform
             encx0 = pickle.load(open('furniture/furnitureencx0.sav','rb'))
-            encx1 = pickle.load(open('furniture/furnitureencx2.sav','rb'))
+            encx2 = pickle.load(open('furniture/furnitureencx2.sav','rb'))
             encx3 = pickle.load(open('furniture/furnitureencx3.sav','rb'))
             d = encx0.transform([data[0]])
             data[0] = d[0]
