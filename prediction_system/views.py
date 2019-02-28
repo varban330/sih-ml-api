@@ -244,44 +244,44 @@ class FurniturePred(APIView):
             return HttpResponse(json.dumps(dict), status=401)
 
     def post(self,request):
-        try:
-            if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
-                # Preparing Data from Request
-                data = list()
-                data.append(request.data['Parts'])
-                data.append(request.data['Quantity'])
-                data.append(request.data['Availability'])
-                data.append(request.data['Need'])
+        # try:
+        if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
+            # Preparing Data from Request
+            data = list()
+            data.append(request.data['Parts'])
+            data.append(request.data['Quantity'])
+            data.append(request.data['Availability'])
+            data.append(request.data['Need'])
 
-                # Label Encoders load and transform
-                encx0 = pickle.load(open('furniture/furnitureencx0.sav','rb'))
-                encx1 = pickle.load(open('furniture/furnitureencx2.sav','rb'))
-                encx3 = pickle.load(open('furniture/furnitureencx3.sav','rb'))
-                d = encx0.transform([data[0]])
-                data[0] = d[0]
-                d = encx2.transform([data[2]])
-                data[2] = d[0]
-                d = encx3.transform([data[3]])
-                data[3] = d[0]
-                # One hot encoder load and transform
-                onehenc = pickle.load(open('furniture/furnitureonehenc.sav','rb'))
-                ar = np.array(data)
-                ar = ar.reshape(1,-1)
-                x_pred=onehenc.transform(ar).toarray()
-                k = list()
-                notlist = [0,5,7]
-                for i in range(10):
-                    if i not in notlist:
-                        k.append(i)
-                x_pred = x_pred[:,k]
-                # Load Model and Predict
-                loaded_model = pickle.load(open('furniture/furnituremodel.sav', 'rb'))
-                result = loaded_model.predict(x_pred)
-                dict = {'days':round(result[0])}
-                return HttpResponse(json.dumps(dict), status=200)
-            else:
-                dict = {'message': 'Incorrect API Key'}
-                return HttpResponse(json.dumps(dict), status=401)
-        except Exception as e:
-            dict = {'message': e.message}
-            return HttpResponse(json.dumps(dict), status=400)
+            # Label Encoders load and transform
+            encx0 = pickle.load(open('furniture/furnitureencx0.sav','rb'))
+            encx1 = pickle.load(open('furniture/furnitureencx2.sav','rb'))
+            encx3 = pickle.load(open('furniture/furnitureencx3.sav','rb'))
+            d = encx0.transform([data[0]])
+            data[0] = d[0]
+            d = encx2.transform([data[2]])
+            data[2] = d[0]
+            d = encx3.transform([data[3]])
+            data[3] = d[0]
+            # One hot encoder load and transform
+            onehenc = pickle.load(open('furniture/furnitureonehenc.sav','rb'))
+            ar = np.array(data)
+            ar = ar.reshape(1,-1)
+            x_pred=onehenc.transform(ar).toarray()
+            k = list()
+            notlist = [0,5,7]
+            for i in range(10):
+                if i not in notlist:
+                    k.append(i)
+            x_pred = x_pred[:,k]
+            # Load Model and Predict
+            loaded_model = pickle.load(open('furniture/furnituremodel.sav', 'rb'))
+            result = loaded_model.predict(x_pred)
+            dict = {'days':round(result[0])}
+            return HttpResponse(json.dumps(dict), status=200)
+        else:
+            dict = {'message': 'Incorrect API Key'}
+            return HttpResponse(json.dumps(dict), status=401)
+        # except Exception as e:
+        #     dict = {'message': e.message}
+        #     return HttpResponse(json.dumps(dict), status=400)
