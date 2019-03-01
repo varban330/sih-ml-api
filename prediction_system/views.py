@@ -362,3 +362,63 @@ class ElectricityPred(APIView):
         except Exception as e:
             dict = {'message': str(e)}
             return HttpResponse(json.dumps(dict), status=400)
+
+
+class WIFIPred(APIView):
+def get(self, request):
+    if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
+        dict = {'message': 'WIFI Prediction'}
+        return HttpResponse(json.dumps(dict),status=200)
+    else:
+        dict = {'message': 'Incorrect API Key'}
+        return HttpResponse(json.dumps(dict), status=401)
+
+def post(self,request):
+    try:
+        if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
+            # Preparing Data from Request
+            data = list()
+            data.append(request.data['Issue'])
+            data.append(request.data['Area'])
+            data.append(request.data['Need'])
+            data.append(request.data['Availability'])
+
+            # Label Encoders load and transform
+            encx0 = pickle.load(open('WIFI/WIFIencx0.sav','rb'))
+            encx1 = pickle.load(open('WIFI/WIFIencx1.sav','rb'))
+            encx2 = pickle.load(open('WIFI/WIFIencx2.sav','rb'))
+            encx3 = pickle.load(open('WIFI/WIFIencx3.sav','rb'))
+            d = encx0.transform([data[0]])
+            data[0] = d[0]
+            d = encx1.transform([data[1]])
+            data[1] = d[0]
+            d = encx2.transform([data[2]])
+            data[2] = d[0]
+            d = encx3.transform([data[3]])
+            data[3] = d[0]
+            # One hot encoder load and transform
+            onehenc = pickle.load(open('WIFI/WIFIonehenc.sav','rb'))
+            ar = np.array(data)
+            ar = ar.reshape(1,-1)
+            x_pred=onehenc.transform(ar).toarray()
+            k = list()
+            notlist = [0,3,7,9]
+            for i in range(11):
+                if i not in notlist:
+                    k.append(i)
+            x_pred = x_pred[:,k]
+            # Load Model and Predict
+            loaded_model = pickle.load(open('WIFI/WIFImodel.sav', 'rb'))
+            result = loaded_model.predict(x_pred)
+            dict = {'time1':round(result[0]),
+                    'time2':max([1,round(result[0]/1.5)]),
+                    'time3':max([1,round(result[0]/2)]),
+                    'timeOF':max([1,round(result[0]/2.5)])
+                    }
+            return HttpResponse(json.dumps(dict), status=200)
+        else:
+            dict = {'message': 'Incorrect API Key'}
+            return HttpResponse(json.dumps(dict), status=401)
+    except Exception as e:
+        dict = {'message': str(e)}
+        return HttpResponse(json.dumps(dict), status=400)

@@ -9,5 +9,6 @@ urlpatterns = [
     url(r'^scholarship_disbursement/$', views.SchoDisPred.as_view(), name="Scholarship_Disbursement"),
     url(r'^water_supply/$', views.WaterSupplyPred.as_view(), name="Water_Supply"),
     url(r'^furniture/$', views.FurniturePred.as_view(), name="Furniture"),
-    url(r'^electricity/$', views.ElectricityPred.as_view(), name="Furniture"),
+    url(r'^electricity/$', views.ElectricityPred.as_view(), name="Electricity"),
+    url(r'^wifi/$', views.WIFIPred.as_view(), name="WIFI"),
 ]
