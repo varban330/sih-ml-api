@@ -337,7 +337,7 @@ class ElectricityPred(APIView):
                 d = encx3.transform([data[3]])
                 data[3] = d[0]
                 # One hot encoder load and transform
-                onehenc = pickle.load(open('Electricity/Electricityonehenc.sav','rb'))
+                onehenc = pickle.load(open('Electricity/Electricity.sav','rb'))
                 ar = np.array(data)
                 ar = ar.reshape(1,-1)
                 x_pred=onehenc.transform(ar).toarray()
