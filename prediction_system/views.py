@@ -348,7 +348,7 @@ class ElectricityPred(APIView):
                         k.append(i)
                 x_pred = x_pred[:,k]
                 # Load Model and Predict
-                loaded_model = pickle.load(open('Electricty/Electrictymodel.sav', 'rb'))
+                loaded_model = pickle.load(open('Electricity/Electricitymodel.sav', 'rb'))
                 result = loaded_model.predict(x_pred)
                 dict = {'time1':round(result[0]),
                         'time2':max([1,round(result[0]/1.5)]),
