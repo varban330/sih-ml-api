@@ -356,7 +356,7 @@ class ElectricityPred(APIView):
                         'time2':max([1,round(result[0]/1.5)]),
                         'time3':max([1,round(result[0]/2)]),
                         'timeOF':max([1,round(result[0]/2.5)]),
-                        'importance':importance
+                        'importance':importance[0]
                         }
                 return HttpResponse(json.dumps(dict), status=200)
             else:
