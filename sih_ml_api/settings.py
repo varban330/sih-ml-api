@@ -126,20 +126,6 @@ CORS_ORIGIN_WHITELIST=(
     'herokuapp.com', "*"
 )
 
-CORS_ALLOW_HEADERS = (
-        'x-requested-with',
-        'content-type',
-        'accept',
-        'origin',
-        'authorization',
-        'x-csrftoken'
-        'Ocp_Apim_Subscription_Key'
-)
-
-CORS_ORIGIN_REGEX_WHITELIST=(
-    r'sih-ecms-server.herokuapp.com',
-)
-
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Static files (CSS, JavaScript, Images)
