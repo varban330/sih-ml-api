@@ -308,7 +308,7 @@ class FurniturePred(APIView):
 
 
 class ElectricityPred(APIView):
-    def post(self, request):
+    def get(self, request):
         if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
             dict = {'message': 'Electricty Prediction'}
             return HttpResponse(json.dumps(dict),status=200)
@@ -316,7 +316,7 @@ class ElectricityPred(APIView):
             dict = {'message': 'Incorrect API Key'}
             return HttpResponse(json.dumps(dict), status=401)
 
-    def get(self,request):
+    def post(self,request):
         try:
             if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
                 # Preparing Data from Request
