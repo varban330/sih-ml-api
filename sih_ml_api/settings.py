@@ -123,7 +123,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 CORS_ORIGIN_WHITELIST=(
     'sih-ecms-server.herokuapp.com',
-    'herokuapp.com',
+    'herokuapp.com', "*"
 )
 
 CORS_ORIGIN_REGEX_WHITELIST=(
