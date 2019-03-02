@@ -7,3 +7,4 @@ urlpatterns = [
     url(r'^predict/', include('prediction_system.urls')),
     url(r'^train/', include('training_system.urls'))
 ]
+ 

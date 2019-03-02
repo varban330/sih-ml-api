@@ -25,7 +25,7 @@ SECRET_KEY = '6ckg0h4_r9aew708xb0e4nx6xb1-j%tq9g#thvrbxdcn!+!idr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['gentle-meadow-70184.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['sih-ecms-server.herokuapp.com','gentle-meadow-70184.herokuapp.com', 'localhost']
 
 
 # Application definition
