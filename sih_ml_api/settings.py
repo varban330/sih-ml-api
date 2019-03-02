@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'prediction_system.apps.PredictionSystemConfig',
+    'training_system.apps.TrainingSystemConfig',
 ]
 
 MIDDLEWARE = [
