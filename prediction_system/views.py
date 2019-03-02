@@ -361,7 +361,7 @@ class ElectricityPred(APIView):
                 return HttpResponse(json.dumps(dict), status=401)
         except Exception as e:
             dict = {'message': str(e)}
-            return HttpResponse(json.dumps(dict), status=400)
+            return HttpResponse(json.dumps(dict), status=403)
 
 
 class WIFIPred(APIView):
