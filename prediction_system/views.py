@@ -588,8 +588,8 @@ class SportsPred(APIView):
                 result = loaded_model.predict(x_pred)
                 dict = {'time1':round(result[0]),
                         'time2':max([1,round(result[0]/1.5)]),
-                        'time3':max([1,round(result[0]/2.5)]),
-                        'timeOF':0
+                        'time3':max([1,round(result[0]/2)]),
+                        'timeOF':max([1,round(result[0]/2.5)]
                         }
                 return HttpResponse(json.dumps(dict), status=200)
             else:
