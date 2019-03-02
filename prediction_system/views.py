@@ -483,3 +483,57 @@ class RoadsPred(APIView):
         except Exception as e:
             dict = {'message': str(e)}
             return HttpResponse(json.dumps(dict), status=400)
+
+
+class FeesPred(APIView):
+    def get(self, request):
+        if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
+            dict = {'message': 'Fee Pay Prediction'}
+            return HttpResponse(json.dumps(dict),status=200)
+        else:
+            dict = {'message': 'Incorrect API Key'}
+            return HttpResponse(json.dumps(dict), status=401)
+
+    def post(self,request):
+        try:
+            if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
+                # Preparing Data from Request
+                data = list()
+                data.append(request.data['Status'])
+                data.append(request.data['Mode'])
+                data.append(request.data['Bank'])
+                # Label Encoders load and transform
+                encx0 = pickle.load(open('FeePay/FeePayencx0.sav','rb'))
+                encx1 = pickle.load(open('FeePay/FeePayencx1.sav','rb'))
+                encx2 = pickle.load(open('FeePay/FeePayencx2.sav','rb'))
+                d = encx0.transform([data[0]])
+                data[0] = d[0]
+                d = encx1.transform([data[1]])
+                data[1] = d[0]
+                d = encx2.transform([data[2]])
+                data[2] = d[0]
+                # One hot encoder load and transform
+                onehenc = pickle.load(open('FeePay/FeePayonehenc.sav','rb'))
+                ar = np.array(data)
+                ar = ar.reshape(1,-1)
+                x_pred=onehenc.transform(ar).toarray()
+                k = list()
+                for i in range(20):
+                    if i!=0 and i!=12 and i!=17:
+                        k.append(i)
+                x_pred = x_pred[:,k]
+                # Load Model and Predict
+                loaded_model = pickle.load(open('FeePay/FeePaymodel.sav', 'rb'))
+                result = loaded_model.predict(x_pred)
+                dict = {'time1':round(result[0]),
+                        'time2':max([1,round(result[0]/1.5)]),
+                        'time3':max([1,round(result[0]/2)]),
+                        'timeOF':0
+                        }
+                return HttpResponse(json.dumps(dict), status=200)
+            else:
+                dict = {'message': 'Incorrect API Key'}
+                return HttpResponse(json.dumps(dict), status=401)
+        except Exception as e:
+            dict = {'message': str(e)}
+            return HttpResponse(json.dumps(dict), status=400)
