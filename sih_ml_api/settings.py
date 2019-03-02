@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'sih_ml_api.urls'
@@ -118,13 +118,16 @@ USE_L10N = True
 
 USE_TZ = True
 
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
 CORS_ORIGIN_WHITELIST=(
     'sih-ecms-server.herokuapp.com',
     'herokuapp.com',
-    'sih-ecms-server.herokuapp.com/student/form/electricity',
+)
+
+CORS_ORIGIN_REGEX_WHITELIST=(
+    r'sih-ecms-server.herokuapp.com',
 )
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
