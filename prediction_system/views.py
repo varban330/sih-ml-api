@@ -518,8 +518,9 @@ class FeesPred(APIView):
                 ar = ar.reshape(1,-1)
                 x_pred=onehenc.transform(ar).toarray()
                 k = list()
-                for i in range(20):
-                    if i!=0 and i!=12 and i!=17:
+                notlist = [0,3,8]
+                for i in range(11):
+                    if i not in notlist:
                         k.append(i)
                 x_pred = x_pred[:,k]
                 # Load Model and Predict
