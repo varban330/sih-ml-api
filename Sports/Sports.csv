@@ -1,0 +1,50 @@
+Grievance Subject,Issue with - New Material/ Material Repair,Material Needed - (OFP),Availability - (OFP),Manpower required - (OFP),Need of Special Machinery - (OFP),Days till response - (Prediction)
+Not Reqd,Material Repair,5,Need To Order,Yes,No,9
+Not Reqd,New Material,1,Available,No,No,4
+Not Reqd,New Material,3,Available,No,No,8
+Not Reqd,Material Repair,1,Available,Yes,Yes,3
+Not Reqd,New Material,3,Available,No,No,8
+Not Reqd,New Material,4,Available,Yes,No,8
+Not Reqd,Material Repair,7,Need To Order,No,No,3
+Not Reqd,Material Repair,5,Need To Order,No,No,6
+Not Reqd,Material Repair,8,Need To Order,Yes,Yes,9
+Not Reqd,Material Repair,1,Available,No,No,7
+Not Reqd,Material Repair,8,Need To Order,Yes,Yes,9
+Not Reqd,Material Repair,6,Need To Order,No,No,3
+Not Reqd,New Material,5,Available,Yes,Yes,5
+Not Reqd,Material Repair,7,Need To Order,Yes,No,6
+Not Reqd,New Material,7,Need To Order,No,Yes,5
+Not Reqd,New Material,6,Need To Order,No,Yes,6
+Not Reqd,New Material,2,Available,Yes,No,5
+Not Reqd,New Material,3,Available,Yes,No,11
+Not Reqd,New Material,2,Need To Order,Yes,Yes,7
+Not Reqd,Material Repair,3,Need To Order,Yes,No,6
+Not Reqd,Material Repair,8,Need To Order,Yes,Yes,9
+Not Reqd,Material Repair,6,Available,Yes,Yes,6
+Not Reqd,Material Repair,6,Available,No,Yes,11
+Not Reqd,Material Repair,1,Need To Order,No,Yes,8
+Not Reqd,Material Repair,7,Available,Yes,No,8
+Not Reqd,New Material,2,Need To Order,No,Yes,6
+Not Reqd,Material Repair,1,Need To Order,Yes,Yes,10
+Not Reqd,New Material,6,Need To Order,Yes,No,4
+Not Reqd,Material Repair,2,Available,Yes,No,7
+Not Reqd,Material Repair,1,Need To Order,Yes,No,13
+Not Reqd,Material Repair,5,Available,No,Yes,7
+Not Reqd,Material Repair,5,Need To Order,No,No,6
+Not Reqd,Material Repair,1,Need To Order,Yes,No,13
+Not Reqd,New Material,3,Available,Yes,No,11
+Not Reqd,New Material,7,Available,No,No,11
+Not Reqd,Material Repair,3,Available,No,No,12
+Not Reqd,New Material,3,Available,No,Yes,10
+Not Reqd,New Material,2,Available,No,No,5
+Not Reqd,Material Repair,2,Available,Yes,Yes,10
+Not Reqd,Material Repair,1,Available,Yes,Yes,3
+Not Reqd,New Material,5,Available,Yes,No,7
+Not Reqd,New Material,8,Available,No,Yes,8
+Not Reqd,Material Repair,8,Need To Order,Yes,No,11
+Not Reqd,Material Repair,4,Available,No,Yes,12
+Not Reqd,Material Repair,6,Need To Order,Yes,No,3
+Not Reqd,Material Repair,8,Available,Yes,No,12
+Not Reqd,Material Repair,8,Available,No,No,10
+Not Reqd,New Material,2,Need To Order,Yes,Yes,7
+Not Reqd,Material Repair,2,Need To Order,Yes,Yes,11

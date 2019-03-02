@@ -538,3 +538,63 @@ class FeesPred(APIView):
         except Exception as e:
             dict = {'message': str(e)}
             return HttpResponse(json.dumps(dict), status=400)
+
+
+class SportsPred(APIView):
+    def get(self, request):
+        if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
+            dict = {'message': 'Sports Material Prediction'}
+            return HttpResponse(json.dumps(dict),status=200)
+        else:
+            dict = {'message': 'Incorrect API Key'}
+            return HttpResponse(json.dumps(dict), status=401)
+
+    def post(self,request):
+        try:
+            if request.META["HTTP_OCP_APIM_SUBSCRIPTION_KEY"] == api_key:
+                # Preparing Data from Request
+                data = list()
+                data.append(request.data['Issue'])
+                data.append(request.data['Material'])
+                data.append(request.data['Availability'])
+                data.append(request.data['Manpower'])
+                data.append(request.data['Need'])
+                # Label Encoders load and transform
+                encx0 = pickle.load(open('Sports/Sportsencx0.sav','rb'))
+                encx2 = pickle.load(open('Sports/Sportsencx2.sav','rb'))
+                encx3 = pickle.load(open('Sports/Sportsencx3.sav','rb'))
+                encx4 = pickle.load(open('Sports/Sportsencx4.sav','rb'))
+                d = encx0.transform([data[0]])
+                data[0] = d[0]
+                d = encx2.transform([data[2]])
+                data[2] = d[0]
+                d = encx3.transform([data[3]])
+                data[3] = d[0]
+                d = encx4.transform([data[4]])
+                data[4] = d[0]
+                # One hot encoder load and transform
+                onehenc = pickle.load(open('Sports/Sportsonehenc.sav','rb'))
+                ar = np.array(data)
+                ar = ar.reshape(1,-1)
+                x_pred=onehenc.transform(ar).toarray()
+                k = list()
+                notlist = [0,2,4,6]
+                for i in range(9):
+                    if i not in notlist:
+                        k.append(i)
+                x_pred = x_pred[:,k]
+                # Load Model and Predict
+                loaded_model = pickle.load(open('Sports/Sportsmodel.sav', 'rb'))
+                result = loaded_model.predict(x_pred)
+                dict = {'time1':round(result[0]),
+                        'time2':max([1,round(result[0]/1.5)]),
+                        'time3':max([1,round(result[0]/2.5)]),
+                        'timeOF':0
+                        }
+                return HttpResponse(json.dumps(dict), status=200)
+            else:
+                dict = {'message': 'Incorrect API Key'}
+                return HttpResponse(json.dumps(dict), status=401)
+        except Exception as e:
+            dict = {'message': str(e)}
+            return HttpResponse(json.dumps(dict), status=400)
