@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^furniture/$', views.FurniturePred.as_view(), name="Furniture"),
     url(r'^electricity/$', views.ElectricityPred.as_view(), name="Electricity"),
     url(r'^wifi/$', views.WIFIPred.as_view(), name="WIFI"),
+    url(r'^roads/$', views.RoadsPred.as_view(), name="Roads"),
 ]
