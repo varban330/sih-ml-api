@@ -349,11 +349,14 @@ class ElectricityPred(APIView):
                 x_pred = x_pred[:,k]
                 # Load Model and Predict
                 loaded_model = pickle.load(open('Electricity/Electricitymodel.sav', 'rb'))
+                classifier = pickle.load(open('ElectricityClassmodel.sav'))
                 result = loaded_model.predict(x_pred)
+                importance = classifier.predict(x_pred)
                 dict = {'time1':round(result[0]),
                         'time2':max([1,round(result[0]/1.5)]),
                         'time3':max([1,round(result[0]/2)]),
-                        'timeOF':max([1,round(result[0]/2.5)])
+                        'timeOF':max([1,round(result[0]/2.5)]),
+                        'importance':importance
                         }
                 return HttpResponse(json.dumps(dict), status=200)
             else:

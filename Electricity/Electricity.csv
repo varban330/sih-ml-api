@@ -1,50 +1,50 @@
-Grievance Subject,Issue with - Electricity/AC,Quantity of Parts - (OFP),Availablity - Available/Need to Order - (OFP),Need of external expert - (OFP),Suitable time for visit,Grievance Description,Days till response
-Not Reqd,ELECTRICITY,10,Available,No,16:31:33,Not Reqd,12
-Not Reqd,ELECTRICITY,15,Need To Order,Yes,17:04:32,Not Reqd,4
-Not Reqd,AC,5,Available,No,09:13:21,Not Reqd,7
-Not Reqd,ELECTRICITY,5,Need To Order,No,14:29:59,Not Reqd,5
-Not Reqd,ELECTRICITY,7,Available,Yes,10:28:12,Not Reqd,9
-Not Reqd,AC,11,Available,No,15:22:06,Not Reqd,10
-Not Reqd,AC,7,Available,No,17:59:06,Not Reqd,7
-Not Reqd,AC,14,Available,No,14:51:50,Not Reqd,13
-Not Reqd,AC,9,Available,Yes,11:34:54,Not Reqd,8
-Not Reqd,AC,6,Need To Order,No,12:23:12,Not Reqd,8
-Not Reqd,AC,14,Available,Yes,16:40:19,Not Reqd,12
-Not Reqd,AC,10,Need To Order,No,15:19:26,Not Reqd,8
-Not Reqd,AC,12,Available,No,18:38:14,Not Reqd,7
-Not Reqd,ELECTRICITY,11,Need To Order,No,10:06:50,Not Reqd,7
-Not Reqd,AC,15,Available,Yes,14:53:01,Not Reqd,5
-Not Reqd,AC,11,Need To Order,Yes,16:46:41,Not Reqd,8
-Not Reqd,ELECTRICITY,11,Available,No,14:09:33,Not Reqd,6
-Not Reqd,ELECTRICITY,15,Need To Order,No,10:05:52,Not Reqd,8
-Not Reqd,AC,7,Available,No,18:44:46,Not Reqd,7
-Not Reqd,ELECTRICITY,7,Need To Order,No,09:29:07,Not Reqd,5
-Not Reqd,AC,10,Available,Yes,15:15:11,Not Reqd,6
-Not Reqd,ELECTRICITY,10,Need To Order,Yes,15:20:51,Not Reqd,6
-Not Reqd,AC,13,Available,No,10:09:11,Not Reqd,8
-Not Reqd,ELECTRICITY,12,Available,No,10:47:43,Not Reqd,9
-Not Reqd,ELECTRICITY,5,Available,Yes,12:23:46,Not Reqd,10
-Not Reqd,AC,13,Need To Order,Yes,18:57:19,Not Reqd,11
-Not Reqd,AC,15,Need To Order,No,12:58:30,Not Reqd,8
-Not Reqd,AC,10,Need To Order,No,10:36:06,Not Reqd,8
-Not Reqd,AC,15,Available,Yes,10:00:02,Not Reqd,5
-Not Reqd,ELECTRICITY,14,Available,No,14:17:07,Not Reqd,13
-Not Reqd,AC,8,Available,No,14:02:09,Not Reqd,4
-Not Reqd,ELECTRICITY,10,Available,No,10:49:06,Not Reqd,12
-Not Reqd,AC,7,Available,Yes,18:24:47,Not Reqd,6
-Not Reqd,AC,13,Need To Order,Yes,12:37:23,Not Reqd,11
-Not Reqd,AC,5,Need To Order,No,15:31:56,Not Reqd,6
-Not Reqd,ELECTRICITY,14,Need To Order,Yes,18:48:08,Not Reqd,13
-Not Reqd,AC,13,Need To Order,No,18:39:40,Not Reqd,7
-Not Reqd,AC,12,Need To Order,No,11:46:09,Not Reqd,10
-Not Reqd,AC,7,Need To Order,Yes,11:54:20,Not Reqd,3
-Not Reqd,ELECTRICITY,14,Need To Order,No,12:44:27,Not Reqd,8
-Not Reqd,AC,11,Need To Order,No,09:12:43,Not Reqd,8
-Not Reqd,AC,12,Available,No,17:53:25,Not Reqd,7
-Not Reqd,ELECTRICITY,6,Need To Order,No,13:40:31,Not Reqd,9
-Not Reqd,AC,6,Need To Order,Yes,13:56:05,Not Reqd,9
-Not Reqd,ELECTRICITY,7,Available,Yes,15:34:37,Not Reqd,9
-Not Reqd,AC,7,Available,No,18:25:32,Not Reqd,7
-Not Reqd,ELECTRICITY,14,Need To Order,Yes,17:06:32,Not Reqd,13
-Not Reqd,ELECTRICITY,7,Available,No,17:33:11,Not Reqd,4
-Not Reqd,AC,15,Need To Order,Yes,11:42:53,Not Reqd,4
+Grievance Subject,Issue with - Electricity/AC,Quantity of Parts - (OFP),Availablity - Available/Need to Order - (OFP),Need of external expert - (OFP),Suitable time for visit,Grievance Description,Days till response,Importance
+Not Reqd,ELECTRICITY,10,Available,No,16:31:33,Not Reqd,12,Major 
+Not Reqd,ELECTRICITY,15,Need To Order,Yes,17:04:32,Not Reqd,4,Minor
+Not Reqd,AC,5,Available,No,09:13:21,Not Reqd,7,Minor
+Not Reqd,ELECTRICITY,5,Need To Order,No,14:29:59,Not Reqd,5,Minor
+Not Reqd,ELECTRICITY,7,Available,Yes,10:28:12,Not Reqd,9,Major 
+Not Reqd,AC,11,Available,No,15:22:06,Not Reqd,10,Major 
+Not Reqd,AC,7,Available,No,17:59:06,Not Reqd,7,Major 
+Not Reqd,AC,14,Available,No,14:51:50,Not Reqd,13,Minor
+Not Reqd,AC,9,Available,Yes,11:34:54,Not Reqd,8,Minor
+Not Reqd,AC,6,Need To Order,No,12:23:12,Not Reqd,8,Minor
+Not Reqd,AC,14,Available,Yes,16:40:19,Not Reqd,12,Major 
+Not Reqd,AC,10,Need To Order,No,15:19:26,Not Reqd,8,Major 
+Not Reqd,AC,12,Available,No,18:38:14,Not Reqd,7,Minor
+Not Reqd,ELECTRICITY,11,Need To Order,No,10:06:50,Not Reqd,7,Minor
+Not Reqd,AC,15,Available,Yes,14:53:01,Not Reqd,5,Major 
+Not Reqd,AC,11,Need To Order,Yes,16:46:41,Not Reqd,8,Minor
+Not Reqd,ELECTRICITY,11,Available,No,14:09:33,Not Reqd,6,Minor
+Not Reqd,ELECTRICITY,15,Need To Order,No,10:05:52,Not Reqd,8,Minor
+Not Reqd,AC,7,Available,No,18:44:46,Not Reqd,7,Major 
+Not Reqd,ELECTRICITY,7,Need To Order,No,09:29:07,Not Reqd,5,Major 
+Not Reqd,AC,10,Available,Yes,15:15:11,Not Reqd,6,Major 
+Not Reqd,ELECTRICITY,10,Need To Order,Yes,15:20:51,Not Reqd,6,Minor
+Not Reqd,AC,13,Available,No,10:09:11,Not Reqd,8,Minor
+Not Reqd,ELECTRICITY,12,Available,No,10:47:43,Not Reqd,9,Minor
+Not Reqd,ELECTRICITY,5,Available,Yes,12:23:46,Not Reqd,10,Major 
+Not Reqd,AC,13,Need To Order,Yes,18:57:19,Not Reqd,11,Major 
+Not Reqd,AC,15,Need To Order,No,12:58:30,Not Reqd,8,Minor
+Not Reqd,AC,10,Need To Order,No,10:36:06,Not Reqd,8,Minor
+Not Reqd,AC,15,Available,Yes,10:00:02,Not Reqd,5,Major 
+Not Reqd,ELECTRICITY,14,Available,No,14:17:07,Not Reqd,13,Minor
+Not Reqd,AC,8,Available,No,14:02:09,Not Reqd,4,Minor
+Not Reqd,ELECTRICITY,10,Available,No,10:49:06,Not Reqd,12,Minor
+Not Reqd,AC,7,Available,Yes,18:24:47,Not Reqd,6,Major 
+Not Reqd,AC,13,Need To Order,Yes,12:37:23,Not Reqd,11,Major 
+Not Reqd,AC,5,Need To Order,No,15:31:56,Not Reqd,6,Minor
+Not Reqd,ELECTRICITY,14,Need To Order,Yes,18:48:08,Not Reqd,13,Minor
+Not Reqd,AC,13,Need To Order,No,18:39:40,Not Reqd,7,Major 
+Not Reqd,AC,12,Need To Order,No,11:46:09,Not Reqd,10,Minor
+Not Reqd,AC,7,Need To Order,Yes,11:54:20,Not Reqd,3,Minor
+Not Reqd,ELECTRICITY,14,Need To Order,No,12:44:27,Not Reqd,8,Minor
+Not Reqd,AC,11,Need To Order,No,09:12:43,Not Reqd,8,Major 
+Not Reqd,AC,12,Available,No,17:53:25,Not Reqd,7,Major 
+Not Reqd,ELECTRICITY,6,Need To Order,No,13:40:31,Not Reqd,9,Minor
+Not Reqd,AC,6,Need To Order,Yes,13:56:05,Not Reqd,9,Minor
+Not Reqd,ELECTRICITY,7,Available,Yes,15:34:37,Not Reqd,9,Major 
+Not Reqd,AC,7,Available,No,18:25:32,Not Reqd,7,Minor
+Not Reqd,ELECTRICITY,14,Need To Order,Yes,17:06:32,Not Reqd,13,Minor
+Not Reqd,ELECTRICITY,7,Available,No,17:33:11,Not Reqd,4,Minor
+Not Reqd,AC,15,Need To Order,Yes,11:42:53,Not Reqd,4,Major 
