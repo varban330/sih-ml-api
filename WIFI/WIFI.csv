@@ -1,50 +1,50 @@
-Grievance Subject,Issue with - Speed/ Range/ Connectivity,Problem Area - (OFP),Need for replacement - (OFP),Availability - (OFP),Grievance Description ,Days till response (Predicted)
-Not Reqd,Connectivity,WIFIRouter,Yes,Need To Order,Not Reqd,8
-Not Reqd,Range,Bandwidth,Yes,Need To Order,Not Reqd,8
-Not Reqd,Connectivity,WIFIRouter,Yes,Need To Order,Not Reqd,8
-Not Reqd,Speed,Bandwidth,Yes,Need To Order,Not Reqd,7
-Not Reqd,Connectivity,Ports,No,Available,Not Reqd,9
-Not Reqd,Connectivity,Lan Wire,No,Available,Not Reqd,8
-Not Reqd,Speed,Bandwidth,Yes,Need To Order,Not Reqd,7
-Not Reqd,Connectivity,Lan Wire,No,Available,Not Reqd,8
-Not Reqd,Connectivity,Ports,Yes,Available,Not Reqd,7
-Not Reqd,Speed,Lan Wire,Yes,Available,Not Reqd,10
-Not Reqd,Speed,Lan Wire,Yes,Available,Not Reqd,10
-Not Reqd,Speed,Lan Wire,Yes,Need To Order,Not Reqd,8
-Not Reqd,Connectivity,WIFIRouter,Yes,Need To Order,Not Reqd,8
-Not Reqd,Range,Bandwidth,Yes,Need To Order,Not Reqd,8
-Not Reqd,Connectivity,Lan Wire,Yes,Available,Not Reqd,10
-Not Reqd,Connectivity,Lan Wire,Yes,Need To Order,Not Reqd,7
-Not Reqd,Range,Ports,No,Need To Order,Not Reqd,8
-Not Reqd,Connectivity,Lan Wire,No,Need To Order,Not Reqd,9
-Not Reqd,Range,WIFIRouter,Yes,Need To Order,Not Reqd,8
-Not Reqd,Range,Lan Wire,No,Available,Not Reqd,10
-Not Reqd,Range,WIFIRouter,No,Need To Order,Not Reqd,8
-Not Reqd,Connectivity,Ports,No,Available,Not Reqd,9
-Not Reqd,Speed,Ports,No,Available,Not Reqd,7
-Not Reqd,Connectivity,Lan Wire,No,Need To Order,Not Reqd,9
-Not Reqd,Range,Lan Wire,No,Available,Not Reqd,10
-Not Reqd,Speed,Bandwidth,Yes,Available,Not Reqd,6
-Not Reqd,Connectivity,Ports,Yes,Need To Order,Not Reqd,5
-Not Reqd,Speed,WIFIRouter,Yes,Need To Order,Not Reqd,6
-Not Reqd,Range,Ports,Yes,Available,Not Reqd,8
-Not Reqd,Range,Bandwidth,Yes,Available,Not Reqd,6
-Not Reqd,Range,Ports,Yes,Need To Order,Not Reqd,8
-Not Reqd,Speed,Bandwidth,Yes,Available,Not Reqd,6
-Not Reqd,Range,Bandwidth,No,Available,Not Reqd,7
-Not Reqd,Connectivity,Lan Wire,No,Available,Not Reqd,8
-Not Reqd,Range,Bandwidth,No,Need To Order,Not Reqd,7
-Not Reqd,Connectivity,WIFIRouter,Yes,Need To Order,Not Reqd,8
-Not Reqd,Connectivity,Lan Wire,Yes,Need To Order,Not Reqd,7
-Not Reqd,Speed,WIFIRouter,No,Available,Not Reqd,6
-Not Reqd,Speed,WIFIRouter,No,Available,Not Reqd,6
-Not Reqd,Range,Ports,Yes,Need To Order,Not Reqd,8
-Not Reqd,Range,Ports,No,Need To Order,Not Reqd,8
-Not Reqd,Speed,Lan Wire,No,Need To Order,Not Reqd,11
-Not Reqd,Speed,Bandwidth,No,Available,Not Reqd,4
-Not Reqd,Speed,WIFIRouter,No,Need To Order,Not Reqd,10
-Not Reqd,Speed,Ports,No,Available,Not Reqd,7
-Not Reqd,Speed,Ports,Yes,Need To Order,Not Reqd,8
-Not Reqd,Speed,WIFIRouter,Yes,Available,Not Reqd,8
-Not Reqd,Range,Lan Wire,Yes,Need To Order,Not Reqd,8
-Not Reqd,Connectivity,Bandwidth,Yes,Available,Not Reqd,7
+Grievance Subject,Issue with - Speed/ Range/ Connectivity,Problem Area - (OFP),Need for replacement - (OFP),Availability - (OFP),Grievance Description ,Days till response (Predicted),Importance
+Not Reqd,Connectivity,WIFIRouter,Yes,Need To Order,Not Reqd,8,Major 
+Not Reqd,Range,Bandwidth,Yes,Need To Order,Not Reqd,8,Minor
+Not Reqd,Connectivity,WIFIRouter,Yes,Need To Order,Not Reqd,8,Minor
+Not Reqd,Speed,Bandwidth,Yes,Need To Order,Not Reqd,7,Minor
+Not Reqd,Connectivity,Ports,No,Available,Not Reqd,9,Major 
+Not Reqd,Connectivity,Lan Wire,No,Available,Not Reqd,8,Major 
+Not Reqd,Speed,Bandwidth,Yes,Need To Order,Not Reqd,7,Major 
+Not Reqd,Connectivity,Lan Wire,No,Available,Not Reqd,8,Minor
+Not Reqd,Connectivity,Ports,Yes,Available,Not Reqd,7,Minor
+Not Reqd,Speed,Lan Wire,Yes,Available,Not Reqd,10,Minor
+Not Reqd,Speed,Lan Wire,Yes,Available,Not Reqd,10,Major 
+Not Reqd,Speed,Lan Wire,Yes,Need To Order,Not Reqd,8,Major 
+Not Reqd,Connectivity,WIFIRouter,Yes,Need To Order,Not Reqd,8,Minor
+Not Reqd,Range,Bandwidth,Yes,Need To Order,Not Reqd,8,Minor
+Not Reqd,Connectivity,Lan Wire,Yes,Available,Not Reqd,10,Major 
+Not Reqd,Connectivity,Lan Wire,Yes,Need To Order,Not Reqd,7,Minor
+Not Reqd,Range,Ports,No,Need To Order,Not Reqd,8,Minor
+Not Reqd,Connectivity,Lan Wire,No,Need To Order,Not Reqd,9,Minor
+Not Reqd,Range,WIFIRouter,Yes,Need To Order,Not Reqd,8,Major 
+Not Reqd,Range,Lan Wire,No,Available,Not Reqd,10,Major 
+Not Reqd,Range,WIFIRouter,No,Need To Order,Not Reqd,8,Major 
+Not Reqd,Connectivity,Ports,No,Available,Not Reqd,9,Minor
+Not Reqd,Speed,Ports,No,Available,Not Reqd,7,Minor
+Not Reqd,Connectivity,Lan Wire,No,Need To Order,Not Reqd,9,Minor
+Not Reqd,Range,Lan Wire,No,Available,Not Reqd,10,Major 
+Not Reqd,Speed,Bandwidth,Yes,Available,Not Reqd,6,Major 
+Not Reqd,Connectivity,Ports,Yes,Need To Order,Not Reqd,5,Minor
+Not Reqd,Speed,WIFIRouter,Yes,Need To Order,Not Reqd,6,Minor
+Not Reqd,Range,Ports,Yes,Available,Not Reqd,8,Major 
+Not Reqd,Range,Bandwidth,Yes,Available,Not Reqd,6,Minor
+Not Reqd,Range,Ports,Yes,Need To Order,Not Reqd,8,Minor
+Not Reqd,Speed,Bandwidth,Yes,Available,Not Reqd,6,Minor
+Not Reqd,Range,Bandwidth,No,Available,Not Reqd,7,Major 
+Not Reqd,Connectivity,Lan Wire,No,Available,Not Reqd,8,Major 
+Not Reqd,Range,Bandwidth,No,Need To Order,Not Reqd,7,Minor
+Not Reqd,Connectivity,WIFIRouter,Yes,Need To Order,Not Reqd,8,Minor
+Not Reqd,Connectivity,Lan Wire,Yes,Need To Order,Not Reqd,7,Major 
+Not Reqd,Speed,WIFIRouter,No,Available,Not Reqd,6,Minor
+Not Reqd,Speed,WIFIRouter,No,Available,Not Reqd,6,Minor
+Not Reqd,Range,Ports,Yes,Need To Order,Not Reqd,8,Minor
+Not Reqd,Range,Ports,No,Need To Order,Not Reqd,8,Major 
+Not Reqd,Speed,Lan Wire,No,Need To Order,Not Reqd,11,Major 
+Not Reqd,Speed,Bandwidth,No,Available,Not Reqd,4,Minor
+Not Reqd,Speed,WIFIRouter,No,Need To Order,Not Reqd,10,Minor
+Not Reqd,Speed,Ports,No,Available,Not Reqd,7,Major 
+Not Reqd,Speed,Ports,Yes,Need To Order,Not Reqd,8,Minor
+Not Reqd,Speed,WIFIRouter,Yes,Available,Not Reqd,8,Minor
+Not Reqd,Range,Lan Wire,Yes,Need To Order,Not Reqd,8,Minor
+Not Reqd,Connectivity,Bandwidth,Yes,Available,Not Reqd,7,Major 
