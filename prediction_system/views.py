@@ -175,10 +175,13 @@ class SchoDisPred(APIView):
                 # Load Model and Predict
                 loaded_model = pickle.load(open('scholarship_disbursement/scholarship_disbursementmodel.sav', 'rb'))
                 result = loaded_model.predict(x_pred)
+                classifier = pickle.load(open('scholarship_disbursement/scholarship_disbursementClassmodel.sav', 'rb'))
+                importance = classifier.predict(x_pred)
                 dict = {'time1':round(result[0]),
                         'time2':max([1,round(result[0]/1.5)]),
                         'time3':max([1,round(result[0]/2)]),
-                        'timeOF':0
+                        'timeOF':0,
+                        "importance":importance[0]
                         }
                 return HttpResponse(json.dumps(dict), status=200)
             else:
