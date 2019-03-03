@@ -1,50 +1,50 @@
-Grievance Subject,Issue with - New Road/ Road Repair,Material Needed - (OFP),Availability - (OFP),Manpower required - (OFP),Need of Special Machinery - (OFP),Grievance Description,Days till response - (Prediction)
-Not Reqd,Road Repair,20,Need To Order,No,Yes,Not Reqd,26
-Not Reqd,Road Repair,15,Need To Order,Yes,Yes,Not Reqd,22
-Not Reqd,New Road,7,Available,Yes,Yes,Not Reqd,23
-Not Reqd,New Road,45,Need To Order,No,Yes,Not Reqd,26
-Not Reqd,Road Repair,48,Available,No,Yes,Not Reqd,25
-Not Reqd,New Road,26,Need To Order,No,Yes,Not Reqd,27
-Not Reqd,New Road,12,Available,Yes,No,Not Reqd,19
-Not Reqd,New Road,6,Need To Order,Yes,Yes,Not Reqd,23
-Not Reqd,New Road,23,Available,Yes,No,Not Reqd,22
-Not Reqd,New Road,46,Need To Order,Yes,No,Not Reqd,25
-Not Reqd,New Road,3,Need To Order,No,Yes,Not Reqd,19
-Not Reqd,New Road,7,Need To Order,Yes,Yes,Not Reqd,23
-Not Reqd,Road Repair,89,Available,No,No,Not Reqd,25
-Not Reqd,New Road,2,Available,Yes,Yes,Not Reqd,22
-Not Reqd,New Road,1,Available,No,Yes,Not Reqd,24
-Not Reqd,Road Repair,62,Available,No,No,Not Reqd,22
-Not Reqd,Road Repair,32,Available,No,Yes,Not Reqd,26
-Not Reqd,New Road,47,Available,Yes,Yes,Not Reqd,22
-Not Reqd,Road Repair,12,Need To Order,No,No,Not Reqd,20
-Not Reqd,Road Repair,32,Available,Yes,Yes,Not Reqd,23
-Not Reqd,Road Repair,5,Available,Yes,No,Not Reqd,18
-Not Reqd,Road Repair,4,Available,No,Yes,Not Reqd,21
-Not Reqd,New Road,45,Available,Yes,Yes,Not Reqd,19
-Not Reqd,New Road,7,Need To Order,No,No,Not Reqd,24
-Not Reqd,Road Repair,9,Need To Order,No,No,Not Reqd,23
-Not Reqd,New Road,79,Available,No,No,Not Reqd,23
-Not Reqd,Road Repair,97,Available,Yes,Yes,Not Reqd,24
-Not Reqd,New Road,54,Available,Yes,Yes,Not Reqd,16
-Not Reqd,New Road,2,Available,No,No,Not Reqd,21
-Not Reqd,New Road,6,Need To Order,Yes,Yes,Not Reqd,23
-Not Reqd,New Road,62,Need To Order,Yes,Yes,Not Reqd,22
-Not Reqd,New Road,26,Need To Order,Yes,Yes,Not Reqd,22
-Not Reqd,Road Repair,13,Available,Yes,Yes,Not Reqd,18
-Not Reqd,Road Repair,1,Available,Yes,No,Not Reqd,18
-Not Reqd,New Road,3,Need To Order,No,Yes,Not Reqd,19
-Not Reqd,New Road,31,Available,Yes,Yes,Not Reqd,24
-Not Reqd,New Road,64,Available,Yes,No,Not Reqd,16
-Not Reqd,Road Repair,46,Need To Order,No,Yes,Not Reqd,28
-Not Reqd,New Road,6,Need To Order,Yes,Yes,Not Reqd,23
-Not Reqd,Road Repair,4,Need To Order,Yes,No,Not Reqd,22
-Not Reqd,New Road,51,Available,Yes,Yes,Not Reqd,19
-Not Reqd,Road Repair,15,Available,No,Yes,Not Reqd,24
-Not Reqd,New Road,1,Need To Order,No,Yes,Not Reqd,22
-Not Reqd,Road Repair,5,Available,No,No,Not Reqd,21
-Not Reqd,Road Repair,8,Available,No,No,Not Reqd,21
-Not Reqd,Road Repair,3,Need To Order,Yes,Yes,Not Reqd,23
-Not Reqd,New Road,38,Need To Order,No,No,Not Reqd,27
-Not Reqd,New Road,83,Need To Order,Yes,No,Not Reqd,25
-Not Reqd,New Road,16,Need To Order,Yes,Yes,Not Reqd,19
+Grievance Subject,Issue with - New Road/ Road Repair,Material Needed - (OFP),Availability - (OFP),Manpower required - (OFP),Need of Special Machinery - (OFP),Grievance Description,Days till response - (Prediction),Importance
+Not Reqd,Road Repair,20,Need To Order,No,Yes,Not Reqd,26,Major 
+Not Reqd,Road Repair,15,Need To Order,Yes,Yes,Not Reqd,22,Minor
+Not Reqd,New Road,7,Available,Yes,Yes,Not Reqd,23,Minor
+Not Reqd,New Road,45,Need To Order,No,Yes,Not Reqd,26,Minor
+Not Reqd,Road Repair,48,Available,No,Yes,Not Reqd,25,Major 
+Not Reqd,New Road,26,Need To Order,No,Yes,Not Reqd,27,Major 
+Not Reqd,New Road,12,Available,Yes,No,Not Reqd,19,Major 
+Not Reqd,New Road,6,Need To Order,Yes,Yes,Not Reqd,23,Minor
+Not Reqd,New Road,23,Available,Yes,No,Not Reqd,22,Minor
+Not Reqd,New Road,46,Need To Order,Yes,No,Not Reqd,25,Minor
+Not Reqd,New Road,3,Need To Order,No,Yes,Not Reqd,19,Major 
+Not Reqd,New Road,7,Need To Order,Yes,Yes,Not Reqd,23,Major 
+Not Reqd,Road Repair,89,Available,No,No,Not Reqd,25,Minor
+Not Reqd,New Road,2,Available,Yes,Yes,Not Reqd,22,Minor
+Not Reqd,New Road,1,Available,No,Yes,Not Reqd,24,Major 
+Not Reqd,Road Repair,62,Available,No,No,Not Reqd,22,Minor
+Not Reqd,Road Repair,32,Available,No,Yes,Not Reqd,26,Minor
+Not Reqd,New Road,47,Available,Yes,Yes,Not Reqd,22,Minor
+Not Reqd,Road Repair,12,Need To Order,No,No,Not Reqd,20,Major 
+Not Reqd,Road Repair,32,Available,Yes,Yes,Not Reqd,23,Major 
+Not Reqd,Road Repair,5,Available,Yes,No,Not Reqd,18,Major 
+Not Reqd,Road Repair,4,Available,No,Yes,Not Reqd,21,Minor
+Not Reqd,New Road,45,Available,Yes,Yes,Not Reqd,19,Minor
+Not Reqd,New Road,7,Need To Order,No,No,Not Reqd,24,Minor
+Not Reqd,Road Repair,9,Need To Order,No,No,Not Reqd,23,Major 
+Not Reqd,New Road,79,Available,No,No,Not Reqd,23,Major 
+Not Reqd,Road Repair,97,Available,Yes,Yes,Not Reqd,24,Minor
+Not Reqd,New Road,54,Available,Yes,Yes,Not Reqd,16,Minor
+Not Reqd,New Road,2,Available,No,No,Not Reqd,21,Major 
+Not Reqd,New Road,6,Need To Order,Yes,Yes,Not Reqd,23,Minor
+Not Reqd,New Road,62,Need To Order,Yes,Yes,Not Reqd,22,Minor
+Not Reqd,New Road,26,Need To Order,Yes,Yes,Not Reqd,22,Minor
+Not Reqd,Road Repair,13,Available,Yes,Yes,Not Reqd,18,Major 
+Not Reqd,Road Repair,1,Available,Yes,No,Not Reqd,18,Major 
+Not Reqd,New Road,3,Need To Order,No,Yes,Not Reqd,19,Minor
+Not Reqd,New Road,31,Available,Yes,Yes,Not Reqd,24,Minor
+Not Reqd,New Road,64,Available,Yes,No,Not Reqd,16,Major 
+Not Reqd,Road Repair,46,Need To Order,No,Yes,Not Reqd,28,Minor
+Not Reqd,New Road,6,Need To Order,Yes,Yes,Not Reqd,23,Minor
+Not Reqd,Road Repair,4,Need To Order,Yes,No,Not Reqd,22,Minor
+Not Reqd,New Road,51,Available,Yes,Yes,Not Reqd,19,Major 
+Not Reqd,Road Repair,15,Available,No,Yes,Not Reqd,24,Major 
+Not Reqd,New Road,1,Need To Order,No,Yes,Not Reqd,22,Minor
+Not Reqd,Road Repair,5,Available,No,No,Not Reqd,21,Minor
+Not Reqd,Road Repair,8,Available,No,No,Not Reqd,21,Major 
+Not Reqd,Road Repair,3,Need To Order,Yes,Yes,Not Reqd,23,Minor
+Not Reqd,New Road,38,Need To Order,No,No,Not Reqd,27,Minor
+Not Reqd,New Road,83,Need To Order,Yes,No,Not Reqd,25,Minor
+Not Reqd,New Road,16,Need To Order,Yes,Yes,Not Reqd,19,Major 
